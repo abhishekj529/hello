@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function Loginvalidate()
+    {
+        var entermail=document.getElementById('email').value;
+        var enterpassword=document.getElementById('password').value;
+        var getemail=localStorage.setItem('email');
+        var getpwd=localStorage.setItem('password');
+    }
+        if(entermail==getemail)
+    {
+        if(enterpassword==getpwd)
+    {
+        alert("login success");
+        window.location='/welcome';
+        return false;
+    }
+    else{
+        alert("invalid credentails")
+    }
+    }
+</script>
+<body>
+    <div class="main"
+    <form>
+        <label for="first">
+            Email
+        </label>
+        <input type="text" name="first" id="email" placeholder="enter email" required/>
+        <br><br>
+        <label for="password">
+            Email
+        </label>
+        <input type="password" name="password" id="pwd" placeholder="enter password" required/>
+        <br><br>
+        <button type="submit" onclick="return Loginvalidate()">LOGIN</button>
+        <br><br>
+    </div>
+    </form>
+    <p>Not Registered?
+        <a href="/register.html" style="text-decoration: none;">
+            Create An Account
+        </a>
+    </p>
+
+</body>
+</html>
